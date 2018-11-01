@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ ! -z "$http_proxy" ]; then
+  export no_proxy=${no_proxy},${JENKINS_SERVICE_HOST},${JENKINS_JNLP_SERVICE_HOST}
+fi
