@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/openshift3/jenkins-slave-base-rhel7:latest
 
-ENV SONARQUBE_SCANNER_VERSION=3.2.0.1227 \
+ENV SONARQUBE_SCANNER_VERSION=3.3.0.1492 \
     NODEJS_VERSION=10 \
     PATH=/opt/rh/rh-nodejs10/root/usr/bin:${HOME}/bin:$PATH \
     LD_LIBRARY_PATH=/opt/rh/rh-nodejs10/root/usr/lib64 \
