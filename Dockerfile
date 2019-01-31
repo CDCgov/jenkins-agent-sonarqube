@@ -18,10 +18,11 @@ RUN chmod +x /usr/local/bin/run-scan.sh && \
     chmod +x /usr/local/bin/configure-slave && \
     yum-config-manager --enable rhel-server-rhscl-7-rpms >/dev/null || : && \
     yum-config-manager --enable rhel-7-server-optional-rpms >/dev/null || : && \
-    INSTALL_PKGS="ansible-lint rh-nodejs10" && \
+    INSTALL_PKGS="ansible-lint rh-nodejs10 ShellCheck" && \
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
+    npm install typescript && \
     curl -L -o sonar-scanner-cli.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONARQUBE_SCANNER_VERSION}-linux.zip && \
     unzip sonar-scanner-cli.zip && \
     mv sonar-scanner-${SONARQUBE_SCANNER_VERSION}-linux /usr/local/sonar-scanner-linux && \
