@@ -7,10 +7,7 @@ ENV SONARQUBE_SCANNER_VERSION=3.3.0.1492 \
     X_SCLS=rh-nodejs10 \
     BASH_ENV=/usr/local/bin/scl_enable \
     ENV=/usr/local/bin/scl_enable \
-    PROMPT_COMMAND=". /usr/local/bin/scl_enable" \
-    http_proxy=http://gatekeeper.mitre.org:80 \
-    https_proxy=http://gatekeeper.mitre.org:80 \
-    no_proxy=.svc,.svc.cluster.local
+    PROMPT_COMMAND=". /usr/local/bin/scl_enable"
 
 COPY run-scan.sh configure-slave /usr/local/bin/
 COPY scl_enable /usr/local/bin/scl_enable
